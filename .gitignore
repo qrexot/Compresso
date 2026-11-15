@@ -1,0 +1,9 @@
+/target/
+**/target/
+**/node_modules/
+/release/
+/payload.zip
+/src-tauri/binaries/*.exe
+/src-tauri/gen/
+*.log
+.DS_Store

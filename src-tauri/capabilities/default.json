@@ -1,0 +1,73 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Default permissions for Compresso",
+  "windows": [
+    "main"
+  ],
+  "permissions": [
+    "core:default",
+    "core:window:default",
+    "core:event:default",
+    "core:image:default",
+    "core:menu:default",
+    "core:resources:default",
+    "core:path:default",
+    "shell:default",
+    {
+      "identifier": "shell:allow-execute",
+      "allow": [
+        {
+          "name": "binaries/ffmpeg",
+          "sidecar": true,
+          "args": true
+        },
+        {
+          "name": "binaries/ffprobe",
+          "sidecar": true,
+          "args": true
+        }
+      ]
+    },
+    {
+      "identifier": "shell:allow-spawn",
+      "allow": [
+        {
+          "name": "binaries/ffmpeg",
+          "sidecar": true,
+          "args": true
+        },
+        {
+          "name": "binaries/ffprobe",
+          "sidecar": true,
+          "args": true
+        }
+      ]
+    },
+    "shell:allow-stdin-write",
+    "shell:allow-kill",
+    "fs:default",
+    "fs:allow-read-text-file",
+    "fs:allow-write-file",
+    "fs:allow-stat",
+    {
+      "identifier": "fs:scope",
+      "allow": [
+        "**/*",
+        "**",
+        "*",
+        "$HOME/**/*",
+        "$DESKTOP/**/*",
+        "$DOWNLOAD/**/*",
+        "$DOCUMENT/**/*",
+        "$VIDEO/**/*",
+        "$TEMP/**/*"
+      ]
+    },
+    "dialog:default",
+    "clipboard-manager:default",
+    "updater:default",
+    "process:default",
+    "dialog:allow-open"
+  ]
+}

@@ -1,0 +1,1 @@
+{"private":true,"type":"module","devDependencies":{"jsdom":"^31.0.1"},"scripts":{"test":"node check-features.mjs && node check-encoding.mjs && node check-design.mjs && node check-i18n.mjs"}}
